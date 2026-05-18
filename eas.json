@@ -1,0 +1,113 @@
+{
+  "cli": {
+    "version": ">= 14.0.0",
+    "promptToInstallUpdate": false
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "ios": {
+        "simulator": false,
+        "buildConfiguration": "Debug",
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug",
+        "resourceClass": "medium"
+      },
+      "env": {
+        "APP_ENV": "development",
+        "ENVIRONMENT": "development"
+      }
+    },
+
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "autoIncrement": true,
+      "ios": {
+        "simulator": false,
+        "buildConfiguration": "Release",
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "resourceClass": "medium"
+      },
+      "env": {
+        "APP_ENV": "preview",
+        "ENVIRONMENT": "preview"
+      }
+    },
+
+    "production": {
+      "distribution": "store",
+      "channel": "production",
+      "autoIncrement": true,
+      "ios": {
+        "buildConfiguration": "Release",
+        "resourceClass": "m-medium",
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease",
+        "resourceClass": "medium",
+        "image": "latest"
+      },
+      "env": {
+        "APP_ENV": "production",
+        "ENVIRONMENT": "production"
+      }
+    }
+  },
+
+  "update": {
+    "production": {
+      "channel": "production",
+      "message": "Production hotfix"
+    },
+    "preview": {
+      "channel": "preview",
+      "message": "Preview update"
+    },
+    "development": {
+      "channel": "development",
+      "message": "Development update"
+    }
+  },
+
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "nikos_1@live.co.uk",
+        "ascAppId": "6767384012",
+        "appleTeamId": "2RTZ3U6STC",
+        "language": "en-GB",
+        "sku": "com.drivesmart.app"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal",
+        "releaseStatus": "draft",
+        "rollout": 1.0
+      }
+    },
+    "preview": {
+      "ios": {
+        "appleId": "nikos_1@live.co.uk",
+        "ascAppId": "6767384012",
+        "appleTeamId": "2RTZ3U6STC"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    }
+  }
+}

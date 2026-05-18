@@ -1,0 +1,152 @@
+{
+  "expo": {
+    "name": "Drive Smart – Driving Instructor",
+    "slug": "drivesmart-instructor",
+    "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "orientation": "portrait",
+    "icon": "./assets/images/drive-smart-icon.jpg",
+    "scheme": "drivesmart",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "backgroundColor": "#FFFFFF",
+    "primaryColor": "#FF6700",
+
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.nikos.drivesmart",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Drive Smart uses your location to calculate accurate driving routes between lesson locations and to show your home-to-first-lesson travel time.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Drive Smart uses your location to calculate accurate driving routes between lesson locations and to show your home-to-first-lesson travel time.",
+        "NSUserNotificationsUsageDescription": "Drive Smart sends push notifications for new messages, lesson confirmations, payment requests, and lesson reminders to help you stay on schedule.",
+        "NSCameraUsageDescription": "Drive Smart needs camera access to let you take a profile photo for your pupil records.",
+        "NSPhotoLibraryUsageDescription": "Drive Smart needs photo library access to let you upload a profile photo for your pupil records.",
+        "NSPhotoLibraryAddUsageDescription": "Drive Smart needs access to save photos to your library.",
+        "NSFaceIDUsageDescription": "Drive Smart uses Face ID to provide secure, one-tap sign-in so you can access your diary without typing your password each time.",
+        "UIBackgroundModes": ["fetch", "remote-notification"],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "requireFullScreen": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+            "NSPrivacyAccessedAPITypeReasons": ["C617.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategorySystemBootTime",
+            "NSPrivacyAccessedAPITypeReasons": ["35F9.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryDiskSpace",
+            "NSPrivacyAccessedAPITypeReasons": ["E174.1"]
+          }
+        ]
+      }
+    },
+
+    "android": {
+      "package": "com.nikos.drivesmart",
+      "versionCode": 1,
+      "compileSdkVersion": 35,
+      "targetSdkVersion": 35,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/drive-smart-icon.jpg",
+        "backgroundColor": "#FF6700"
+      },
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SCHEDULE_EXACT_ALARM"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/drive-smart-icon.jpg"
+    },
+
+    "updates": {
+      "url": "https://u.expo.dev/b9e8e33a-3fb8-424e-88fa-c495d8ed2f57",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 3000,
+      "requestHeaders": {
+        "expo-channel-name": "production"
+      }
+    },
+
+    "plugins": [
+      "expo-router",
+      [
+        "expo-updates",
+        {
+          "username": "nikos_1"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/drive-smart-icon.jpg",
+          "imageWidth": 280,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/drive-smart-icon.jpg",
+          "color": "#FF6700",
+          "defaultChannel": "default",
+          "sounds": []
+        }
+      ],
+      "expo-local-authentication",
+      "expo-secure-store"
+    ],
+
+    "experiments": {
+      "typedRoutes": true
+    },
+
+    "extra": {
+      "eas": {
+        "projectId": "b9e8e33a-3fb8-424e-88fa-c495d8ed2f57"
+      }
+    },
+
+    "description": "Drive Smart is the ultimate app for professional driving instructors. Manage pupils, schedule lessons with AI-powered route optimisation, fill gap lessons instantly via broadcast, track payments, and communicate with pupils — all in one beautifully designed app.",
+
+    "keywords": [
+      "driving instructor",
+      "driving lessons",
+      "lesson scheduler",
+      "pupil management",
+      "driving school",
+      "smart schedule",
+      "ADI app",
+      "route optimisation",
+      "lesson booking",
+      "driving teacher"
+    ]
+  }
+}
